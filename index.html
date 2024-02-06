@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Adarsh Patel Portfolio</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+			integrity="s8f3e349b7c"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<h1 class="name-with-cursor">Adarsh Patel</h1>
+
+				<div class="toggle-section">
+					<button id="about-button" onclick="toggleSection('about')">
+						About Me
+					</button>
+					<button id="work-button" onclick="toggleSection('work')">
+						Work Experience
+					</button>
+					<button
+						id="web-projects-button"
+						onclick="toggleSection('web-projects')"
+					>
+						Web Projects
+					</button>
+					<button
+						id="mobile-projects-button"
+						onclick="toggleSection('mobile-projects')"
+					>
+						Mobile Projects
+					</button>
+					<button
+						id="hardware-projects-button"
+						onclick="toggleSection('hardware-projects')"
+					>
+						Hardware Projects
+					</button>
+					<button
+						id="leadership-button"
+						onclick="toggleSection('leadership')"
+					>
+						Extracurriculars
+					</button>
+				</div>
+			</header>
+			<section id="about-section" class="card">
+				<h2>Hi, I'm Adarsh! 👋</h2>
+				<p class="about-me-text">
+					<br />
+					I am currently a full-time Computer Engineering and
+					Management student at McMaster University actively pursuing
+					New Grad 2024 opportunities, with a particular passion for
+					full-stack and web development. Proficient in multiple
+					programming languages, I'm continuously seeking
+					opportunities to expand my knowledge, as I thrive on
+					challenging myself to achieve constant improvement.
+					<br />
+					<br />
+					Check out my experiences and projects on this page, and feel
+					free to connect with me through my socials below!
+					<br />
+					<br />
+					Find my resume
+					<a
+						href="assets/pdf/Adarsh_Patel_Resume.pdf"
+						target="_blank"
+						class="resume-link"
+						>here (PDF)</a
+					>
+				</p>
+			</section>
+
+			<section id="work-section" class="card" style="display: none">
+				<h2>Work Experience 💼</h2>
+
+				<div class="work-item">
+					<div class="work-title">
+						<h3 class="work-company-role">
+							<span>IBM</span>
+							<span>Back End Developer Intern</span>
+						</h3>
+						<h3 class="work-date-location">
+							<span class="date">May 2022 – Sept. 2022</span>
+							<span class="location">Toronto, Ontario</span>
+						</h3>
+					</div>
+					<p>
+						I worked on the Data Virtualization product which is
+						part of IBM Cloud Pak for Data. As a Back-End Intern I
+						worked on various projects using many different tools. I
+						improved the efficiency of a security scan by 80% by
+						creating a python script that only parses essential JSON
+						data into CSV files for developers to assess. I also
+						Implemented a db2 user defined function in C that
+						integrates a C++ library to support data masking for the
+						Data Virtualization platform to ensure data privacy is
+						maintained across all user roles. Additionally, I
+						created a SQL stored procedure which configured access
+						levels for various roles to ensure minimum access policy
+						across the platform and I also developed a bash daemon
+						script to call this function periodically to constantly
+						update user roles as they are created.
+					</p>
+				</div>
+
+				<div class="work-item">
+					<div class="work-title">
+						<h3 class="work-company-role">
+							<span>MLH Fellowship powered by Meta</span>
+							<span>Production Engineering Fellow</span>
+						</h3>
+						<h3 class="work-date-location">
+							<span class="date">June 2021 – Sept. 2021</span>
+							<span class="location">Remote</span>
+						</h3>
+					</div>
+					<p>
+						Explored Facebook’s Production Engineering/DevOps role
+						through guided training for Linux, CI/CD, and AWS. I
+						made various web applications with Flask and Python and
+						hosted them on AWS EC2 instances with CentOS. For each
+						project I also implemented cAdvisor to monitor and
+						observe performance characteristics of running Docker
+						containers in the web app. To auto-deploy changes to the
+						project into production and run linters, I created a
+						CI/CD pipeline using GitHub Actions. Throughout the
+						fellowship we also learned about scripting, so I
+						developed automated scripts with Bash to test endpoints
+						and send notifications/deployment status via Discord
+						through workflow
+					</p>
+				</div>
+
+				<div class="work-item">
+					<div class="work-title">
+						<h3 class="work-company-role">
+							<span>Sepeor Inc.</span>
+							<span>Freelance Full-Stack Developer</span>
+						</h3>
+						<h3 class="work-date-location">
+							<span class="date">June 2021 – Dec. 2021</span>
+							<span class="location">Remote</span>
+						</h3>
+					</div>
+					<p>
+						Created a cross-platform mobile app with React Native
+						for young professionals to connect with peers, engage
+						with communities and explore job/extracurricular
+						opportunities. I optimized the app’s UI/UX using React
+						Native Accessibility API to provide a smooth experience
+						for users with dyslexia and partial blindness. In
+						addition to the front-end, I am also developed a REST
+						API with express.js to communicate with the back-end
+						MongoDB database. Throughout the development process, I
+						worked remotely in a team of three in an agile scrum
+						environment to maximize productivity. My team also
+						worked closely with the client to implement their
+						suggestions as they are provided.
+					</p>
+				</div>
+			</section>
+
+			<section
+				id="web-projects-section"
+				class="card"
+				style="display: none"
+			>
+				<h2>Web Projects 🖥️</h2>
+				<div>
+					<div class="project-logos-container">
+						<h2>HoopChat</h2>
+						<div class="project-logos">
+							<img
+								class="logo"
+								src="assets/img/node-logo.png"
+								alt="Express.js Logo"
+								title="Express.js"
+							/>
+							<img
+								class="logo"
+								src="assets/img/js-logo.png"
+								alt="JavaScript Logo"
+								title="JavaScript"
+							/>
+							<img
+								class="logo"
+								src="assets/img/html-logo.png"
+								alt="HTML Logo"
+								title="HTML"
+							/>
+							<img
+								class="logo"
+								src="assets/img/css-logo.png"
+								alt="CSS Logo"
+								title="CSS"
+							/>
+
+							<img
+								class="logo"
+								src="assets/img/react-logo.png"
+								alt="React Logo"
+								title="React"
+							/>
+							<img
+								class="logo"
+								src="assets/img/mongodb-logo.png"
+								alt="MongoDB Logo"
+								title="MongoDB"
+							/>
+							<img
+								class="logo"
+								src="assets/img/heroku-logo.png"
+								alt="Heroku Logo"
+								title="Heroku"
+							/>
+						</div>
+					</div>
+
+					<p>
+						Developed a React web application enabling users to
+						organize, plan, and post basketball drop-ins within
+						their communities. Implemented a REST API using
+						Express.js and MongoDB for backend data storage.
+						Integrated user authentication using JWT, designed the
+						user interface, and incorporated a map view featuring
+						all events using the Mapbox API.
+						<br />
+						<a
+							href="https://fathomless-meadow-84500-dd2719f4dddd.herokuapp.com/"
+							class="button"
+							target="_blank"
+							>View Deployment</a
+						>
+						<br />
+						<a
+							href="https://github.com/adarsh-swe/hoopChat"
+							class="button"
+							target="_blank"
+							>GitHub Repository</a
+						>
+					</p>
+				</div>
+
+				<div>
+					<div class="project-logos-container">
+						<h2>Social Media Meta Generator</h2>
+						<div class="project-logos">
+							<img
+								class="logo"
+								src="assets/img/node-logo.png"
+								alt="Express.js Logo"
+								title="Express.js"
+							/>
+							<img
+								class="logo"
+								src="assets/img/js-logo.png"
+								alt="JavaScript Logo"
+								title="JavaScript"
+							/>
+							<img
+								class="logo"
+								src="assets/img/html-logo.png"
+								alt="HTML Logo"
+								title="HTML"
+							/>
+							<img
+								class="logo"
+								src="assets/img/css-logo.png"
+								alt="CSS Logo"
+								title="CSS"
+							/>
+							<img
+								class="logo"
+								src="assets/img/heroku-logo.png"
+								alt="Heroku Logo"
+								title="Heroku"
+							/>
+							<img
+								class="logo"
+								src="assets/img/openai-logo.png"
+								alt="OpenAI Logo"
+								title="Open AI"
+							/>
+						</div>
+					</div>
+					<p>
+						Developed a web application enabling users to generate
+						metadata for social media posts on YouTube, Instagram,
+						and TikTok using AI. Integrated OpenAI’s DALL-E API for
+						thumbnail generation and ChatGPT API for creating video
+						titles, descriptions, and tags. Hosted the application
+						on Heroku and designed the front-end using HTML, CSS,
+						JS, and the Particle.js library.
+						<br />
+						<a
+							href="https://social-media-meta-gen-7e35a2af2697.herokuapp.com/"
+							class="button"
+							target="_blank"
+							>View Deployment</a
+						>
+						<br />
+						<a
+							href="https://github.com/adarsh-swe/yt-data-generator"
+							class="button"
+							target="_blank"
+							>GitHub Repository</a
+						>
+					</p>
+				</div>
+				<div>
+					<div class="project-logos-container">
+						<h2>Personal Portfolio Website</h2>
+						<div class="project-logos">
+							<img
+								class="logo"
+								src="assets/img/js-logo.png"
+								alt="JavaScript Logo"
+								title="JavaScript"
+							/>
+							<img
+								class="logo"
+								src="assets/img/html-logo.png"
+								alt="HTML Logo"
+								title="HTML"
+							/>
+							<img
+								class="logo"
+								src="assets/img/css-logo.png"
+								alt="CSS Logo"
+								title="CSS"
+							/>
+						</div>
+					</div>
+					<p>
+						This is the personal portfolio website you are currently
+						viewing. I built this website with pure HTML/CSS/JS from
+						scratch to showcase my technical abilities.
+						<br />
+						<a
+							href="https://github.com/adarsh-swe/adarsh-swe"
+							class="button"
+							target="_blank"
+							>GitHub Repository</a
+						>
+					</p>
+				</div>
+				<div>
+					<div class="project-logos-container">
+						<h2>Covid-Recovery Tracker</h2>
+						<div class="project-logos">
+							<img
+								class="logo"
+								src="assets/img/node-logo.png"
+								alt="Express.js Logo"
+								title="Express.js"
+							/>
+							<img
+								class="logo"
+								src="assets/img/js-logo.png"
+								alt="JavaScript Logo"
+								title="JavaScript"
+							/>
+							<img
+								class="logo"
+								src="assets/img/html-logo.png"
+								alt="HTML Logo"
+								title="HTML"
+							/>
+							<img
+								class="logo"
+								src="assets/img/css-logo.png"
+								alt="CSS Logo"
+								title="CSS"
+							/>
+							<img
+								class="logo"
+								src="assets/img/heroku-logo.png"
+								alt="Heroku Logo"
+								title="Heroku"
+							/>
+						</div>
+					</div>
+					<p>
+						The app provides a user-friendly interface for
+						displaying COVID-19 statistics, along with information
+						about the COVID-19 vaccine to combat stigma. It also
+						features region-specific news articles. I built this
+						project in a team of 4 over one weekend for McMaster
+						University's Deltahacks hackathon, successfully
+						achieving the goal of destigmatizing the COVID-19
+						vaccine.
+						<br />
+						<a
+							href="https://github.com/adarsh-swe/DeltaH7"
+							class="button"
+							target="_blank"
+							>GitHub Repository</a
+						>
+					</p>
+				</div>
+			</section>
+			<section
+				id="mobile-projects-section"
+				class="card"
+				style="display: none"
+			>
+				<h2>Mobile Projects 📱</h2>
+				<div>
+					<div class="project-logos-container">
+						<h2>ruNFT</h2>
+						<div class="project-logos">
+							<img
+								class="logo"
+								src="assets/img/flutter-logo.png"
+								alt="Flutter Logo"
+								title="Flutter"
+							/>
+							<img
+								class="logo"
+								src="assets/img/dart-logo.png"
+								alt="Dart Logo"
+								title="Dart"
+							/>
+							<img
+								class="logo"
+								src="assets/img/solidity-logo.png"
+								alt="Solidity Logo"
+								title="Solidity"
+							/>
+							<img
+								class="logo"
+								src="assets/img/node-logo.png"
+								alt="Express.js Logo"
+								title="Express.js"
+							/>
+							<img
+								class="logo"
+								src="assets/img/js-logo.png"
+								alt="JavaScript Logo"
+								title="JavaScript"
+							/>
+
+							<img
+								class="logo"
+								src="assets/img/mongodb-logo.png"
+								alt="MongoDB Logo"
+								title="MongoDB"
+							/>
+							<img
+								class="logo"
+								src="assets/img/heroku-logo.png"
+								alt="Heroku Logo"
+								title="Heroku"
+							/>
+						</div>
+					</div>
+					<p>
+						Developed a mobile app using Flutter to create NFTs from
+						users' Strava running maps, published on OpenSea. Built
+						an API with express.js and web3.js for token minting and
+						MongoDB communication which was hosted on heroku.
+						Received 'Best Use of StravaAPI' award at McMaster’s
+						DeltaHacks for promoting a healthy lifestyle through
+						exercise incentivization.
+						<br />
+						<a
+							href="https://github.com/adarsh-swe/ruNFT_backend"
+							class="button"
+							target="_blank"
+							>GitHub Repository</a
+						>
+					</p>
+				</div>
+				<div>
+					<div class="project-logos-container">
+						<h2>PatchTO</h2>
+						<div class="project-logos">
+							<img
+								class="logo"
+								src="assets/img/node-logo.png"
+								alt="Express.js Logo"
+								title="Express.js"
+							/>
+							<img
+								class="logo"
+								src="assets/img/js-logo.png"
+								alt="JavaScript Logo"
+								title="JavaScript"
+							/>
+							<img
+								class="logo"
+								src="assets/img/firebase-logo.png"
+								alt="Firebase Logo"
+								title="Firebase"
+							/>
+							<img
+								class="logo"
+								src="assets/img/react-logo.png"
+								alt="React Logo"
+								title="React"
+							/>
+						</div>
+					</div>
+					<p>
+						PatchTO is inspired by the need to address unnoticed
+						problems in Toronto, observed during the pandemic. It
+						aims to bridge the communication gap between citizens
+						and the government by providing an app to easily report
+						and inform about infrastructure issues. Users can
+						authenticate, mark problems on a GTA map, and submit
+						details. The map displays surrounding issues, enabling
+						upvoting or downvoting based on severity and validity,
+						contributing to the resolution of the city's growing
+						infrastructure challenges.
+						<br />
+						<a
+							href="https://github.com/MadhuranS/PatchTO"
+							class="button"
+							target="_blank"
+							>GitHub Repository</a
+						>
+					</p>
+				</div>
+				<div>
+					<div class="project-logos-container">
+						<h2>Stock Market Simulator App</h2>
+						<div class="project-logos">
+							<img
+								class="logo"
+								src="assets/img/node-logo.png"
+								alt="Express.js Logo"
+								title="Express.js"
+							/>
+							<img
+								class="logo"
+								src="assets/img/js-logo.png"
+								alt="JavaScript Logo"
+								title="JavaScript"
+							/>
+							<img
+								class="logo"
+								src="assets/img/firebase-logo.png"
+								alt="Firebase Logo"
+								title="Firebase"
+							/>
+							<img
+								class="logo"
+								src="assets/img/react-logo.png"
+								alt="React Logo"
+								title="React"
+							/>
+						</div>
+					</div>
+					<p>
+						Worked in a team of two to develop a React Native Stock
+						Market app that utilizes Yahoo Finance and Alpha Vantage
+						API for real-time market data. Integrated Google
+						Firebase for user authorization and portfolio storage,
+						with a REST API using express.js. Implemented features
+						include stock search, trending tickers, news articles,
+						watchlist, and investment simulation with a balance
+						system. Achieved seamless collaboration through GitHub
+						for version control and an organized workflow.
+						<br />
+						<a
+							href="https://github.com/hetp4401/StockSimulator"
+							class="button"
+							target="_blank"
+							>GitHub Repository</a
+						>
+					</p>
+				</div>
+			</section>
+			<section
+				id="hardware-projects-section"
+				class="card"
+				style="display: none"
+			>
+				<div>
+					<div class="project-logos-container">
+						<h2>Fit Reflect</h2>
+
+						<div class="project-logos">
+							<img
+								class="logo"
+								src="assets/img/python-logo.png"
+								alt="Python Logo"
+								title="Python"
+							/>
+							<img
+								class="logo"
+								src="assets/img/rpi-logo.png"
+								alt="Raspberry Pi Logo"
+								title="Raspberry Pi "
+							/>
+						</div>
+					</div>
+					<p>
+						As part of my Engineering Capstone project, I am
+						creating a real-time weightlifting movement tracking
+						system, the integration involves computer vision,
+						sensors, and a smart mirror. Leveraging Python OpenCV
+						and MediaPipe for Computer Vision, motion data is
+						captured and crucial pose landmarks are extracted for
+						meticulous form evaluation. ML Datasets entail
+						constructing exercise datasets with Python Scikit-learn
+						and Pickle for training algorithms. The Hardware
+						Platform utilizes Raspberry Pi 4, complemented by a
+						smart mirror interface. Sensor Integration focuses on
+						real-time heart rate monitoring, fatigue assessment, and
+						pain detection, enhancing user safety and workout
+						efficiency. This project showcases a commitment to
+						pushing technological boundaries for advanced
+						weightlifting solutions.
+					</p>
+				</div>
+				<div>
+					<div class="project-logos-container">
+						<h2>Software Defined Radio</h2>
+						<div class="project-logos">
+							<img
+								class="logo"
+								src="assets/img/cpp-logo.png"
+								alt="C++ Logo"
+								title="C++"
+							/>
+							<img
+								class="logo"
+								src="assets/img/python-logo.png"
+								alt="Python Logo"
+								title="Python"
+							/>
+							<img
+								class="logo"
+								src="assets/img/rpi-logo.png"
+								alt="Raspberry Pi Logo"
+								title="Raspberry Pi "
+							/>
+						</div>
+					</div>
+					<p>
+						Implemented a Software Defined Radio system using C++,
+						Python, and Raspberry Pi. Achieved real-time FM
+						mono/stereo audio reception and extraction of RDS data.
+						Demonstrated expertise in Digital Signal Processing
+						(DSP) primitives, FIR filters, FM demodulation,
+						Phase-Locked Loops (PLLs), resamplers, and the RDS
+						protocol. Enhanced efficiency through multi-threading by
+						running producer/consumer processes on separate threads.
+					</p>
+				</div>
+				<div>
+					<div class="project-logos-container">
+						<h2>Image Decomposer</h2>
+						<div class="project-logos">
+							<img
+								class="logo"
+								src="assets/img/verilog-logo.png"
+								alt="Verilog Logo"
+								title="Verilog"
+							/>
+							<img
+								class="logo"
+								src="assets/img/quartus-logo.png"
+								alt="Quartus Logo"
+								title="Quartus"
+							/>
+						</div>
+					</div>
+					<p>
+						I developed an Image Decomposer using Verilog, ModelSim,
+						and Quartus. The project involved creating a hardware
+						implementation for a 320x240px image. I designed state
+						tables to execute specific steps, including Lossless
+						Decoding, IDCT, Colourspace Conversion, and Upsampling.
+						Image storage was implemented on SRAM, and thorough
+						testing was conducted using Verilog testbenches in
+						ModelSim.
+					</p>
+				</div>
+				<div>
+					<div class="project-logos-container">
+						<h2>Spatial Mapping System</h2>
+						<div class="project-logos">
+							<img
+								class="logo"
+								src="assets/img/c-logo.png"
+								alt="C Logo"
+								title="C"
+							/>
+							<img
+								class="logo"
+								src="assets/img/python-logo.png"
+								alt="Python Logo"
+								title="Python"
+							/>
+							<img
+								class="logo"
+								src="assets/img/i2c-logo.png"
+								alt="I2C Logo"
+								title="I2C"
+							/>
+						</div>
+					</div>
+					<p>
+						Created a Spatial Mapping System utilizing C, I2C, UART,
+						and Python. Developed a data acquisition setup using a
+						TI MCU and a time-of-flight sensor linked to a stepper
+						motor. Processed the obtained xyz coordinates from the
+						ToF sensor as the stepper motor rotated, resulting in a
+						3D map of a hallway. Employed the I2C protocol for
+						retrieving sensor data, transmitted it to a PC via UART,
+						and visualized the room mapping using Python's
+						Matplotlib.
+					</p>
+				</div>
+				<div>
+					<div class="project-logos-container">
+						<h2>Pacemaker</h2>
+						<div class="project-logos">
+							<img
+								class="logo"
+								src="assets/img/python-logo.png"
+								alt="Python Logo"
+								title="Python"
+							/>
+							<img
+								class="logo"
+								src="assets/img/matlab-logo.png"
+								alt="Matlab Logo"
+								title="Matlab"
+							/>
+						</div>
+					</div>
+					<p>
+						Developed a pacemaker simulation using Matlab Simulink,
+						Python, and UART communication. Implemented real
+						pacemaker features on a FRDM-K64F board, ensuring
+						compliance with safety-critical system requirements
+						through the principle of least privilege. Created a user
+						interface in Python using tkinter and pyserial libraries
+						to control the system and communicate with the board
+						over UART.
+					</p>
+				</div>
+			</section>
+
+			<section id="leadership-section" class="card" style="display: none">
+				<h2>Leadership / Extracurricular 🚀</h2>
+				<div>
+					<div class="leadership-title">
+						<h3 class="leadership-role">
+							<span>Google Developer Student Clubs</span>
+							<span>Web Developer Co-Lead</span>
+							<span>Open-Source and Web Developers Team</span>
+						</h3>
+						<h3 class="leadership-date-location">
+							<span class="date">Sept. 2020 – April 2023</span>
+							<span class="location">McMaster University</span>
+						</h3>
+					</div>
+					<p>
+						Enhanced a club website using React to improve UI
+						visibility of upcoming events for over 200 members.
+						Designed a React Native app facilitating task
+						organization within student homes, enhancing group
+						communication. Led an 8-member student developer team in
+						agile scrum, contributing to building and maintaining
+						the club website.
+					</p>
+					<br />
+				</div>
+				<div>
+					<div class="leadership-title">
+						<h3 class="leadership-role">
+							<span>FRC Team 188 Woburn Robotics</span>
+							<span>Tournament Scout</span>
+						</h3>
+						<h3 class="leadership-date-location">
+							<span class="date">Sept. 2015 – June 2019</span>
+							<span class="location"
+								>Woburn Collegiate Institute</span
+							>
+						</h3>
+					</div>
+					<p>
+						As team scout, my primary responsibility was to keenly
+						observe and evaluate other robots during tournaments.
+						This crucial role involved assessing the strengths and
+						capabilities of potential alliance partners to determine
+						their compatibility with our team. By closely
+						scrutinizing their performance, mechanisms, and
+						strategic approaches, I contributed valuable insights to
+						the alliance selection process. This experience not only
+						honed my analytical skills but also enhanced my ability
+						to make informed decisions in a competitive and dynamic
+						environment.
+					</p>
+					<br />
+				</div>
+			</section>
+		</div>
+
+		<footer>
+			<a href="mailto:swe.adarsh@gmail.com"
+				><i class="fa-solid fa-envelope"></i
+			></a>
+			|
+			<a href="https://www.linkedin.com/in/adarsh-patel1" target="_blank">
+				<i class="fab fa-linkedin"></i>
+			</a>
+			|
+			<a href="https://github.com/adarsh-swe" target="_blank">
+				<i class="fab fa-github"></i>
+			</a>
+			|
+			<a href="https://devpost.com/adarshpatel2001" target="_blank">
+				<i class="simple-icons--devpost"></i>
+			</a>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
+</html>

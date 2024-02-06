@@ -1,0 +1,225 @@
+/* styles.css */
+
+:root {
+	--primary-bg: #282c34; /* Primary background color */
+	--primary-text: #abb2bf; /* Primary text color */
+	--secondary-text: #e06c75; /* Secondary text color */
+	--button-bg: #61afef; /* Primary button color */
+	--button-text: #ffffff; /* White text on button */
+	--button-hover: #98c379; /* Darker color on hover */
+	--button-active: #c678dd; /* Darker color for the active button */
+	--link-text: #61afef;
+}
+
+:root {
+	--primary-bg: #f9f9f9; /* Very light grey background color */
+	--primary-text: #343a40; /* Dark text color */
+	--secondary-text: #6c757d; /* Subdued text color */
+	--button-bg: #007bff; /* Primary button color */
+	--button-text: #ffffff; /* White text on button */
+	--button-hover: #0056b3; /* Darker color on hover */
+	--button-active: #0056b3; /* Darker color for the active button */
+	--link-text: #007bff; /* Link text color */
+}
+:root {
+	--primary-bg: #1e1e1e; /* Dark background color */
+	--primary-text: #fff; /* Subdued text color */
+	--secondary-text: #abb2bf; /* Light text color */
+	--button-bg: #61afef; /* Primary button color */
+	--button-text: #ffffff; /* White text on button */
+	--button-hover: #e06c75; /* Darker color on hover */
+	--button-hover-alt: #98c379; /* Darker color on hover */
+	--button-active: #c678dd; /* Darker color for the active button */
+	--link-text: #61afef; /* Link text color */
+}
+
+body {
+	font-family: "Roboto Mono", monospace;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	background-color: var(--primary-bg);
+	color: var(--primary-text);
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+header {
+	background-color: var(--primary-bg);
+	color: var(--primary-text);
+	text-align: center;
+}
+
+section {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 2em;
+	flex: 1;
+}
+
+footer {
+	text-align: center;
+	font-size: 24px;
+	padding: 1em;
+	padding-bottom: 5em;
+	background-color: var(--primary-bg);
+	color: var(--primary-text);
+	margin-top: auto;
+}
+footer a {
+	margin: 0 10px;
+}
+footer i:hover {
+	color: var(--button-hover);
+}
+
+button {
+	background-color: var(--button-bg);
+	color: var(--button-text);
+	border: none;
+	padding: 0.5em 0.6em;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	font-size: 1em;
+}
+
+button:hover {
+	background-color: var(--button-hover);
+}
+
+button.active {
+	background-color: var(--button-active);
+}
+
+h1 {
+	color: var(--primary-text);
+	font-size: 3em;
+}
+h2 {
+	color: var(--primary-text);
+}
+h4,
+h3,
+h5,
+h6 {
+	color: var(--primary-text);
+}
+
+p {
+	line-height: 1.6;
+	color: var(--secondary-text);
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+li {
+	margin-bottom: 0.5em;
+}
+
+a {
+	color: var(--link-text);
+	text-decoration: none;
+}
+a:hover {
+	color: var(--button-hover);
+}
+
+.work-title {
+	display: flex;
+	font-weight: bold;
+	justify-content: space-between;
+	align-items: baseline;
+}
+.work-company-role {
+	display: flex;
+	align-items: self-start;
+	flex-direction: column;
+}
+.work-date-location {
+	display: flex;
+	align-items: self-end;
+	flex-direction: column;
+}
+
+.leadership-title {
+	display: flex;
+	font-weight: bold;
+	justify-content: space-between;
+	align-items: baseline;
+}
+.leadership-role {
+	display: flex;
+	align-items: self-start;
+	flex-direction: column;
+}
+.leadership-date-location {
+	display: flex;
+	align-items: self-end;
+	flex-direction: column;
+}
+
+.name-with-cursor {
+	position: relative;
+	display: inline-block;
+}
+.blinking-cursor {
+	position: absolute;
+	top: 0;
+	right: -0.4em;
+	color: var(--primary-text);
+	font-size: 1em;
+	animation: blink 1.5s infinite;
+}
+.about-me-text {
+	font-size: 1.2em;
+}
+.resume-link {
+	color: var(--link-text);
+}
+.resume-link:hover {
+	color: var(--button-hover);
+}
+.logo {
+	height: 30px;
+	margin-right: 10px; /* Adjust spacing between logos as needed */
+}
+.project-logos-container {
+	display: flex;
+	font-weight: bold;
+	justify-content: space-between;
+	align-items: baseline;
+}
+.project-logos {
+	display: flex;
+	align-items: self-end;
+}
+.simple-icons--devpost {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	--svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M6.002 1.61L0 12.004L6.002 22.39h11.996L24 12.004L17.998 1.61zm1.593 4.084h3.947c3.605 0 6.276 1.695 6.276 6.31c0 4.436-3.21 6.302-6.456 6.302H7.595zm2.517 2.449v7.714h1.241c2.646 0 3.862-1.55 3.862-3.861c.009-2.569-1.096-3.853-3.767-3.853Z'/%3E%3C/svg%3E");
+	background-color: currentColor;
+	-webkit-mask-image: var(--svg);
+	mask-image: var(--svg);
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-size: 100% 100%;
+	mask-size: 100% 100%;
+	transform: translateY(4px);
+}
+
+@keyframes blink {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+	25%,
+	75% {
+		opacity: 0;
+	}
+}
