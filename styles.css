@@ -25,12 +25,12 @@
 	--primary-bg: #1e1e1e; /* Dark background color */
 	--primary-text: #fff; /* Subdued text color */
 	--secondary-text: #abb2bf; /* Light text color */
-	--button-bg: #61afef; /* Primary button color */
+	--button-bg: #1c8ce8; /* Primary button color */
 	--button-text: #ffffff; /* White text on button */
 	--button-hover: #e06c75; /* Darker color on hover */
 	--button-hover-alt: #98c379; /* Darker color on hover */
 	--button-active: #c678dd; /* Darker color for the active button */
-	--link-text: #61afef; /* Link text color */
+	--link-text: #1c8ce8; /* Link text color */
 }
 
 body {
@@ -82,6 +82,7 @@ button {
 	cursor: pointer;
 	transition: background-color 0.3s ease;
 	font-size: 1em;
+	font-weight: bold;
 }
 
 button:hover {
